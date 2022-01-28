@@ -7,10 +7,6 @@ It will use the imported filewriter to save plant data and fetch plant data from
 """
 
 
-def print_plant_header():
-    print("{:<20} {:<20} {:<20}".format("Name", "Last Watered", "Water per Week") + "\n")
-
-
 def print_all_plants():
     plants = filewriter.get_plants()
     for plant in plants:
