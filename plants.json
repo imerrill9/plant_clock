@@ -1,0 +1,19 @@
+{
+    "plants": [
+        {
+            "name": "plant1",
+            "last_watered": "Wednesday",
+            "water_per_week": 2
+        },
+        {
+            "name": "plant2",
+            "last_watered": "Friday",
+            "water_per_week": 1
+        },
+        {
+            "name": "test",
+            "last_watered": "Wednesday",
+            "water_per_week": 2
+        }
+    ]
+}
