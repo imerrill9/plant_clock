@@ -9,7 +9,7 @@ The filewriter uses the json python package to write data and read data from pla
 
 def save_plant(plant):
     if exists("plants.json"):
-        plant_data = __load_plants()
+        plant_data = __load_json()
         plant_data["plants"].append(
             {
                 "name": plant.name,
@@ -41,7 +41,7 @@ def delete_plant(plant):
 
 def get_plants():
     if exists("plants.json"):
-        plant_data = __load_plants()
+        plant_data = __load_json()
         return list(map(lambda p: Plant(p["name"], p["last_watered"], p["water_per_week"]), plant_data["plants"]))
     else:
         print("No plants.json was found!")
@@ -53,6 +53,6 @@ def __save_json(plant_data):
         outfile.write(json_string)
 
 
-def __load_plants():
+def __load_json():
     with open("plants.json") as json_file:
         return dict(json.load(json_file))
